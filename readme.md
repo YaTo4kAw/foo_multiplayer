@@ -9,3 +9,7 @@ launch -> type your domain, port and playlist number to sync with -> be happy
 -------------------
 
 to change config after first executing, use config.toml file
+
+btw, you need EXACT SAME playlists with your friends to work ts properly (same files, same arrangement)
+
+maybe, this project will be bring to completion somewhen, idk
