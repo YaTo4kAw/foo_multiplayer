@@ -72,7 +72,7 @@ class FooMultiplayerClient():
                         if r_index != self.cached_id:
                             self.cached_id = r_index
                             self.wait_for_recieved = True
-                            await httpx.AsyncClient().post(url=f"http://{self.domain}:{self.port}/api/player/play/p{self.sync_id}/{r_index}")
+                            await httpx.AsyncClient().post(url=f"http://localhost:8880/api/player/play/p{self.sync_id}/{r_index}")
 
                         if r_state != self.cached_state:
                             self.cached_state = r_state

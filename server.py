@@ -28,12 +28,12 @@ class FooMultiplayerServer():
                 except json.JSONDecodeError:
                     data = {"raw": message}
 
-                cached_session = data["session"]
-                cached_index = data["index"]
-                cached_state = data["state"]
-                cached_volume = data["volume"]
+                self.cached_session = data["session"]
+                self.cached_index = data["index"]
+                self.cached_state = data["state"]
+                self.cached_volume = data["volume"]
                 
-                print(f"{datetime.now().strftime("%d-%m-%Y %H:%M:%S")}: session -> {cached_session} | index -> {cached_index} | state -> {cached_state} | volume -> {cached_volume}")
+                print(f"{datetime.now().strftime("%d-%m-%Y %H:%M:%S")}: session -> {self.cached_session} | index -> {self.cached_index} | state -> {self.cached_state} | volume -> {self.cached_volume}")
 
         except websockets.exceptions.ConnectionClosed:
             print(f"{datetime.now().strftime("%d-%m-%Y %H:%M:%S")}: connection closed")
